@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "02e0de85-c45f-413e-9201-24d681b27905",
+		"name": "Amazon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50277071",
+		"_collection_link": "https://www.postman.com/abinaya21806-4860424/abinaya-thangaraj-s-workspace/collection/a9zcgu8/amazon?action=share&source=collection_link&creator=50277071"
+	},
+	"item": [
+		{
+			"name": "GetAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://69258a3e82b59600d7241052.mockapi.io/products",
+					"protocol": "https",
+					"host": [
+						"69258a3e82b59600d7241052",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"productName\": \"{{$randomProduct}}\",\r\n        \"price\": \"{{$randomPrice}}\",\r\n        \"stock\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://69258a3e82b59600d7241052.mockapi.io/products",
+					"protocol": "https",
+					"host": [
+						"69258a3e82b59600d7241052",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://69258a3e82b59600d7241052.mockapi.io/products/5",
+					"protocol": "https",
+					"host": [
+						"69258a3e82b59600d7241052",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"products",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://69258a3e82b59600d7241052.mockapi.io/products/7",
+					"protocol": "https",
+					"host": [
+						"69258a3e82b59600d7241052",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"products",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"productName\": \"{{$randomProduct}}\",\r\n        \"price\": \"{{$randomPrice}}\",\r\n        \"stock\": false\r\n    }"
+				},
+				"url": {
+					"raw": "https://69258a3e82b59600d7241052.mockapi.io/products/8",
+					"protocol": "https",
+					"host": [
+						"69258a3e82b59600d7241052",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"products",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "name",
+			"value": ""
+		},
+		{
+			"key": "variable_key",
+			"value": ""
+		}
+	]
+}
